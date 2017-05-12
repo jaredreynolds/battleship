@@ -1,0 +1,12 @@
+/*.grid {
+}*/
+
+.row {
+  display: flex;
+}
+
+.square {
+  border: 1px solid gray;
+  height: 30px;
+  width: 30px;
+}
