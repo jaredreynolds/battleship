@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import Grid from '../components/Grid'
+import { ActionTypes } from '../actions'
 
 const mapStateToProps = (state) => {
     return {
@@ -7,9 +8,20 @@ const mapStateToProps = (state) => {
     }
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onFire: squareKey => {
+            dispatch({
+                type: ActionTypes.Fire,
+                squareKey
+            })
+        }
+    }
+}
+
 const GridContainer = connect(
-    mapStateToProps
-    // mapDispatchToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(Grid)
 
 export default GridContainer

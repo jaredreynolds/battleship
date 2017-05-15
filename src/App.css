@@ -6,7 +6,17 @@
 }
 
 .square {
-  border: 1px solid gray;
+  background-color: lightseagreen;
+  border: 1px solid black;
   height: 30px;
+  text-align: center;
   width: 30px;
+}
+
+.square.hit {
+  background-color: red;
+}
+
+.square.miss {
+  background-color: white;
 }

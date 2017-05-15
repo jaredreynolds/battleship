@@ -5,7 +5,7 @@ export default function Row(props) {
     return (
         <div className="row">
             {props.squares.map(square =>
-                <Square key={square.indexLetter + square.rowIndex} {...square} />
+                <Square key={square.squareKey} {...square} onClick={props.onFire} />
             )}
         </div>
     )

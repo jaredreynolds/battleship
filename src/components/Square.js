@@ -1,9 +1,18 @@
 import React from 'react';
 
-export default function Square(props) {
-    return (
-        <div className="square">
-            {props.indexLetter + (props.rowIndex + 1)}
-        </div>
-    );
+class Square extends React.Component {
+    onClick = () => {
+        this.props.onClick(this.props.squareKey);
+    }
+
+    render() {
+        let classNames = "square" + (this.props.hit !== undefined ? this.props.hit ? ' hit' : ' miss' : '')
+        return (
+            <div className={classNames} onClick={this.onClick}>
+                {/*{this.props.ship}*/}
+            </div>
+        );
+    }
 }
+
+export default Square
